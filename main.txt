@@ -1,0 +1,58 @@
+#include <iostream>
+#include <fstream>
+#include <String>
+#include <stdio.h>
+
+#include "mySimpleComputer.h";
+using namespace std;
+
+const int mask1 = 0x00001;
+const int mask2 = 0x00010;
+const int mask3 = 0x00100;
+const int mask4 = 0x01000;
+const int mask5 = 0x10000;
+
+
+
+int command = 11;
+int operand = 23;
+int value = 0;
+int encode = 0;
+
+int main()
+{
+	setlocale(LC_ALL, "RUS");
+
+
+	char filename[] = "memorySave.dat";
+
+	sc_memoryInit();
+
+	sc_memorySet(120, 90);
+	sc_regGet(mask1, &value);
+
+	cout << "value mask1 after memorySet: " << value << endl;
+	sc_memorySet(25, 17);
+
+	sc_memoryGet(73, &value);
+
+	cout << "value memory: " << value << endl;
+	sc_regGet(mask1, &value);
+	cout << "value mask1 after memoryGet: " << value << endl;
+	sc_memorySave(filename);
+
+	sc_memoryLoad(filename);
+
+
+	sc_regSet(mask3, 1);
+
+	sc_regGet(mask3, &value);
+
+	cout << "value3: " << value << endl;
+
+	sc_commandEncode(command, operand, &encode);
+
+	cout << "value encode: " << encode << endl;
+
+	sc_commandDecode(encode, &command, &operand);
+}
