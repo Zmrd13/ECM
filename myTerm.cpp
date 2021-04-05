@@ -3,13 +3,13 @@
 
 int mt_clrscr()
 {
-    printf("\"E[H\"E[J");
+    printf("\"\\E[H\\E[J\"");
     return 0;
 }
 
 int mt_gotoXY(int y, int x)
 {
-    printf("\"E[%d;%dH", y, x);
+    printf("""\"E[%d;%dH", y, x);
     return 0;
 }
 
