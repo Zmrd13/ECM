@@ -3,7 +3,7 @@
 
 int mt_clrscr()
 {
-    printf("echo -e \"\\E[H\\E[J\"");
+    printf("""\"E[HE[J");
     return 0;
 }
 
