@@ -3,26 +3,26 @@
 
 int mt_clrscr()
 {
-    printf("""\"E[HE[J");
+    printf("\E[H\E[2J");
     return 0;
 }
 
 int mt_gotoXY(int y, int x)
 {
-    printf("""\"E[%d;%dH", y, x);
+    printf("\E[%d;%dH", y, x);
     return 0;
 }
 
 
 
-int mt_ssetfgcolor(int color) {
-    printf("\"E[3%dm", color);
+int mt_ssetfgcolor(enum Colors color) {
+    printf("\E[3%cm", color);
     return 0;
 }
 
-int mt_ssetbgcolor(int color)
+int mt_ssetbgcolor(enum Colors  color)
 {
-    printf("\"E[4%dm", color);
+    printf("\E[4%cm", color);
     return 0;
 }
 
