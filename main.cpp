@@ -48,8 +48,10 @@ int main() {
     sc_memoryLoad(filename);
     sc_memorySet(4,16);
     sc_memoryShow();
+     sc_accShow();
+    mt_gotoXY(2,73);
 
-    cout<<"wwww";
+
 
 
 
