@@ -2,11 +2,11 @@
 #include <string>
 #include <cstdio>
 #include "mySimpleComputer.h"
-
-
-using namespace std;
 int mem[100];
 int registr = 0x00000;
+
+using namespace std;
+
 
 int sc_regSet(int flag, int value) {
 
@@ -71,16 +71,11 @@ int sc_memoryLoad(char* filename) {
 	fp = fopen(filename, "rb");
 
 	fread(m, sizeof m, 1, fp);
-	cout << "Memory value: " << endl;
-	for (int i = 0; i < 100; i++) {
-		cout << m[i] << " ";
-	}
-	cout << endl;
 	return* m;
 }
 
 int sc_regInit() {
-	int registr = 0;
+    registr = 0;
 
 	return 0;
 }
@@ -95,8 +90,6 @@ int sc_regGet(int flag, int* value) {
 	}
 
 	int hreg=registr;
-   cout<<"hex REG="<<hex<<uppercase<<(hreg)<<endl;
-    cout<<"REG="<<dec<<registr<<endl;;
 	return 0;
 }
 
