@@ -12,6 +12,7 @@ int operand = 5;
 int value = 0;
 int encode = 0;
 void sc_memoryShow(){
+    mt_gotoXY(0,0);
     for(int i=0;i<32;i++){
         cout<<"_";
     }
@@ -29,6 +30,16 @@ void sc_memoryShow(){
     }
     cout<<"|";
 }
+void sc_accShow(){
+    mt_gotoXY(2,73);
+    for(int i=0;i<6;i++){
+        cout<<"_";
+    }
+    cout<<"ACC";
+    for(int i=0;i<6;i++){
+        cout<<"_";
+    }
+}
 int main() {
     mt_clrscr();
     sc_regInit();
@@ -37,7 +48,7 @@ int main() {
     sc_memoryLoad(filename);
     sc_memorySet(4,16);
     sc_memoryShow();
-    mt_gotoXY(1,73);
+
     cout<<"wwww";
 
 
