@@ -116,10 +116,12 @@ mt_gotoXY(12,0);
     for(int i=0;i<33;i++){
         cout<<"_";
     }
+    printf("\E(0");
+    
 }
 int main() {
     mt_clrscr();
-    sc_regInit();
+    /*sc_regInit();
     sc_memoryInit();
     sc_memorySave(filename);
     sc_memoryLoad(filename);
@@ -131,7 +133,9 @@ int main() {
     sc_operShow();
     sc_flagShow();
     mt_gotoXY(20,0);
-sc_detShow();
+sc_detShow();*/
+
+    sc_detShow();
 
 
 }
