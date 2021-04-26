@@ -106,6 +106,17 @@ void sc_flagShow(){
     }
     cout<<"|";
 }
+void sc_detShow(){
+mt_gotoXY(12,0);
+
+ for(int i=0;i<32;i++){
+        cout<<"_";
+    }
+    cout<<"______";
+    for(int i=0;i<33;i++){
+        cout<<"_";
+    }
+}
 int main() {
     mt_clrscr();
     sc_regInit();
@@ -120,7 +131,7 @@ int main() {
     sc_operShow();
     sc_flagShow();
     mt_gotoXY(20,0);
-
+sc_detShow();
 
 
 }
