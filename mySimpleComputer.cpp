@@ -1,10 +1,11 @@
+#pragma once
 #include <iostream>
 #include <string>
 #include <cstdio>
 #include "mySimpleComputer.h"
 int mem[100];
-int registr = 0x00000;
 
+int registr = 0x00000;
 using namespace std;
 
 
@@ -38,6 +39,9 @@ int sc_memorySet(int address, int value) {
         mem[address] = value;
 		return 1;
 	}
+}
+void reeg(){
+    cout<<registr;
 }
 
 int sc_memoryGet(int address, int* value) {

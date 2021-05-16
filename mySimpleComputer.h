@@ -4,7 +4,8 @@
 #define _reserved3_ 0x00100
 #define _reserved4_ 0x01000
 #define WC 0x10000
-
+void reeg()
+;
 int  sc_memoryInit();
 int sc_regInit();
 int sc_memorySet(int address, int value);

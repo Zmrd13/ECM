@@ -3,4 +3,4 @@ project(ECM)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(ECM main.cpp mySimpleComputer.h mySimpleComputer.cpp myTerm.cpp myTerm.h)
+add_executable(ECM main.cpp mySimpleComputer.h mySimpleComputer.cpp myTerm.cpp myTerm.h myBigChars.h)
