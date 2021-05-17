@@ -152,15 +152,17 @@ sprintf(hx,"%X",h);
     printf("\E(B");
 }
 int main() {
+    sc_regInit();
+    sc_memoryInit();
+    sc_memorySave(filename);
 while(1) {
     int i=0;
     int t=0;
     cin>>i>>t;
     printf("\E(B");
     mt_clrscr();
-    sc_regInit();
-    sc_memoryInit();
-    sc_memorySave(filename);
+
+
     sc_memoryLoad(filename);
     sc_accShow();
     sc_memorySet(i, t);
@@ -176,6 +178,7 @@ while(1) {
     char h[5];
     sprintf(h,"%X",t);
     cout<<endl<<endl<<t;
+    sc_memorySave(filename);
 
 }
 }
